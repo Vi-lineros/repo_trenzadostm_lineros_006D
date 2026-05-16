@@ -1,0 +1,13 @@
+package com.trenzadostm.trenzadostmpedido.dto;
+
+import lombok.Data;
+
+@Data
+public class DireccionDto {
+
+    private Long idDireccion;
+    private Object ciudad;
+    private Object comuna;
+    private Object region;
+    private String direccion;
+}
