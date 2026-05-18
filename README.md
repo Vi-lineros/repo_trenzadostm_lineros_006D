@@ -115,7 +115,7 @@ El sistema busca digitalizar y centralizar la gestión de:
 ## Cómo ejecutar el proyecto
 
 ### 1. Clonar repositorio
-git clone <url-del-repositorio>
+git clone https://github.com/Vi-lineros/repo_trenzadostm_lineros_006D.git
 
 ---
 
