@@ -39,20 +39,20 @@ Base path común para todos:
 
 ---
 
-### Ubicación
-- /region  
+### Ubicación  |  Puerto:8081                                               
+- /region
 - /ciudad  
 - /comuna  
 - /direccion  
 
 ---
 
-### Usuario
+### Usuario  |  Puerto:8083
 - /usuarios  
 
 ---
 
-### Catálogo de productos e Inventario
+### Catálogo de productos e Inventario  |  Puerto:8084
 - /categorias  
 - /productos  
 - /tipo-producto  
@@ -60,11 +60,15 @@ Base path común para todos:
 
 ---
 
-### Pedidos y Pagos
+### Pedidos  |  Puerto:8085
 - /pedido  
 - /detallepedido
-- /bancos  
-- /pagos  
+ 
+---
+
+### Pagos  |  Puerto:8086
+- /bancos
+- /pagos 
 
 ---
 
@@ -153,7 +157,127 @@ Se recomienda usar Postman para probar todos los endpoints.
 
 Ejemplo base:
 
-http://localhost:9090/api/v1/usuarios
+POST http://localhost:9090/api/v1/comuna
+
+{
+  "comuna" : "pudahuel"
+]
+
+Respuesta esperada: 
+
+{
+    "idComuna": 1,
+    "nombreComuna": "pudahuel"
+}
+
+POST http://localhost:9090/api/v1/ciudad
+
+{
+    "nombreCiudad" : "osorno"
+}
+
+Respuesta esperada: 
+
+{
+    "idCiudad": 1,
+    "nombreCiudad": "osorno"
+}
+
+POST http://localhost:9090/api/v1/region
+
+{
+    "nombreRegion" : "metropolitana"
+}
+
+Respuesta esperada:
+
+{
+    "idRegion": 1,
+    "nombreRegion": "metropolitana"
+}
+
+POST http://localhost:9090/api/v1/direccion
+
+{
+    "ciudad" : {"idCiudad":1},
+    "comuna" : {"idComuna":1},
+    "region" : {"idRegion":1},
+    "direccion" : "Pasaje monti 1095"
+}
+
+Respuesta esperada:
+
+{
+    "idDireccion": 1,
+    "ciudad": {
+        "idCiudad": 1,
+        "nombreCiudad": null
+    },
+    "comuna": {
+        "idComuna": 1,
+        "nombreComuna": null
+    },
+    "region": {
+        "idRegion": 1,
+        "nombreRegion": null
+    },
+    "direccion": "Pasaje monti 1095"
+}
+
+GET http://localhost:9090/api/v1/direccion
+
+Respuesta esperada:
+
+{
+      "idDireccion": 1,
+      "ciudad": {
+           "idCiudad": 1,
+          "nombreCiudad": "osorno"
+      },
+      "comuna": {
+          "idComuna": 1,
+          "nombreComuna": "pudahuel"
+      },
+      "region": {
+          "idRegion": 1,
+          "nombreRegion": "metropolitana"
+      },
+      "direccion": "Pasaje monti 1095"
+}
+
+PUT http://localhost:9090/api/v1/direccion/1
+
+{
+    "ciudad" : {"idCiudad":1},
+    "comuna" : {"idComuna":1},
+    "region" : {"idRegion":1},
+    "direccion" : "estrella 2130"
+}
+
+Respuesta esperada: 
+
+{
+    "idDireccion": 1,
+    "ciudad": {
+        "idCiudad": 1,
+        "nombreCiudad": null
+    },
+    "comuna": {
+        "idComuna": 1,
+        "nombreComuna": null
+    },
+    "region": {
+        "idRegion": 1,
+        "nombreRegion": null
+    },
+    "direccion": "estrella 2130"
+}
+
+DELETE http://localhost:9090/api/v1/direccion/1
+
+Respuesta esperada: 
+
+Direccion eliminada
 
 ---
 
