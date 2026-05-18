@@ -47,7 +47,7 @@ Base path común para todos:
 
 ---
 
-### 👤 Usuario
+### Usuario
 - /usuarios  
 
 ---
