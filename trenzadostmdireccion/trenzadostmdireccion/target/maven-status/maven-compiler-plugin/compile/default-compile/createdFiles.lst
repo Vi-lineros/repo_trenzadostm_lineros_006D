@@ -1,0 +1,10 @@
+com\trenzadostm\trenzadostmdireccion\controller\DireccionController.class
+com\trenzadostm\trenzadostmdireccion\model\Comuna.class
+com\trenzadostm\trenzadostmdireccion\services\ComunaService.class
+com\trenzadostm\trenzadostmdireccion\model\Ciudad.class
+com\trenzadostm\trenzadostmdireccion\controller\CiudadController.class
+com\trenzadostm\trenzadostmdireccion\repository\CiudadRepository.class
+com\trenzadostm\trenzadostmdireccion\controller\ComunaController.class
+com\trenzadostm\trenzadostmdireccion\repository\ComunaRepository.class
+com\trenzadostm\trenzadostmdireccion\TrenzadostmdireccionApplication.class
+com\trenzadostm\trenzadostmdireccion\services\CiudadService.class
