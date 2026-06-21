@@ -1,5 +1,6 @@
 package com.trenzadostm.trenzadostmpedido.services;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -11,7 +12,7 @@ import com.trenzadostm.trenzadostmpedido.model.Pedido;
 import com.trenzadostm.trenzadostmpedido.repository.PedidoRepository;
 
 import com.trenzadostm.trenzadostmpedido.dto.UsuarioDto;
-import com.trenzadostm.trenzadostmpedido.dto.DireccionDto;
+import com.trenzadostm.trenzadostmpedido.dto.SucursalDto;
 
 @Service
 public class PedidoService {
@@ -22,8 +23,6 @@ public class PedidoService {
     @Autowired
     private ExternalServiceClient externalServiceClient;
 
-
-
     public List<Pedido> buscarTodos(){
         return pedidoRepository.findAll();
     }
@@ -32,43 +31,63 @@ public class PedidoService {
         return pedidoRepository.findById(idPedido).get();
     }
 
-    public Pedido modificarPedido(Long idPedido, Pedido unPedido) {
+    public Pedido modificarPedido(Long idPedido, Pedido unPedido){
         Pedido pedidoExistente = pedidoRepository.findById(idPedido).get();
         UsuarioDto usuario = externalServiceClient.obtenerUsuario(unPedido.getIdUsuario());
-        if (usuario == null) {
+        if (usuario == null){
             throw new RuntimeException("Usuario no encontrado");
         }
-        DireccionDto direccion = externalServiceClient.obtenerDireccion(unPedido.getIdDireccion());
-        if (direccion == null) {
-            throw new RuntimeException("Dirección no encontrada");
+        if (usuario.getIdDireccion() == null){
+            throw new RuntimeException("El usuario no tiene dirección asignada");
+        }
+        SucursalDto sucursal = externalServiceClient.obtenerSucursal(unPedido.getIdSucursal());
+        if(sucursal == null){
+            throw new RuntimeException("Sucursal no encontrada");
+        }
+        if (sucursal.getIdDireccion() == null){
+            throw new RuntimeException("La sucursal no tiene dirección asignada");
         }
 
+        if(unPedido.getOpcionEntrega() == null){
+            throw new RuntimeException("Debe indicar una opción de entrega");
+        }
+        
         pedidoExistente.setIdUsuario(unPedido.getIdUsuario());
-        pedidoExistente.setIdDireccion(unPedido.getIdDireccion());
         pedidoExistente.setIdSucursal(unPedido.getIdSucursal());
-        pedidoExistente.setTotal(unPedido.getTotal());
-        pedidoExistente.setIva(unPedido.getIva());
-        pedidoExistente.setTotalConIva(unPedido.getTotalConIva());
+        pedidoExistente.setOpcionEntrega(unPedido.getOpcionEntrega());
 
         return pedidoRepository.save(pedidoExistente);
     }
 
-    public Pedido guardarPedido(Pedido pedido) {
-        UsuarioDto usuario = externalServiceClient.obtenerUsuario(pedido.getIdUsuario());
-            if (usuario == null) {
+    public Pedido guardarPedido(Pedido unPedido){
+        UsuarioDto usuario = externalServiceClient.obtenerUsuario(unPedido.getIdUsuario());
+            if (usuario == null){
                 throw new RuntimeException("Usuario no encontrado");
             }
-        DireccionDto direccion = externalServiceClient.obtenerDireccion(pedido.getIdDireccion());
-            if (direccion == null) {
-                throw new RuntimeException("Dirección no encontrada");
+            if (usuario.getIdDireccion() == null){
+                throw new RuntimeException("El usuario no tiene dirección asignada");
             }
-        pedido.setFechaPedido(LocalDateTime.now());
-        pedido.setEstadoPedido("PENDIENTE");
+        SucursalDto sucursal = externalServiceClient.obtenerSucursal(unPedido.getIdSucursal());
+            if(sucursal == null){
+                throw new RuntimeException("Sucursal no encontrada");
+            }
+            if (sucursal.getIdDireccion() == null){
+                throw new RuntimeException("La sucursal no tiene dirección asignada");
+            }
+        if(unPedido.getOpcionEntrega() == null){
+            throw new RuntimeException("Debe indicar una opción de entrega");
+        }
+        unPedido.setFechaPedido(LocalDateTime.now());
+        unPedido.setEstadoPedido("PENDIENTE");
+        
+        unPedido.setTotal(BigDecimal.ZERO);
+        unPedido.setIva(BigDecimal.ZERO);
+        unPedido.setTotalConIva(BigDecimal.ZERO);
 
-        return pedidoRepository.save(pedido);
+        return pedidoRepository.save(unPedido);
     }
 
-    public void eliminarPedido(Long idPedido) {
+    public void eliminarPedido(Long idPedido){
         pedidoRepository.deleteById(idPedido);
     }
 

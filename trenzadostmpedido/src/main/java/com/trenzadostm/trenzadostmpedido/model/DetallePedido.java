@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 @Entity 
 @Table(name = "detalle_pedido")
 public class DetallePedido {
-
+ 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idDetallePedido;

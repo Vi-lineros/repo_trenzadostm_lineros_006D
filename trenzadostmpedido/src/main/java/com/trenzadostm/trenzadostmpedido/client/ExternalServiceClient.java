@@ -3,7 +3,7 @@ package com.trenzadostm.trenzadostmpedido.client;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
-import com.trenzadostm.trenzadostmpedido.dto.DireccionDto;
+import com.trenzadostm.trenzadostmpedido.dto.SucursalDto;
 import com.trenzadostm.trenzadostmpedido.dto.TipoProductoDto;
 import com.trenzadostm.trenzadostmpedido.dto.UsuarioDto;
 
@@ -28,24 +28,24 @@ public class ExternalServiceClient {
         }
     }
 
-    public DireccionDto obtenerDireccion(Long idDireccion){
+    public TipoProductoDto obtenerTipoProducto(Long idTipoProducto){
         try{
             return webClient.get()
-                    .uri("http://localhost:8081/api/v1/direccion/{id}", idDireccion)
+                    .uri("http://localhost:8084/api/v1/tipo-productos/{id}", idTipoProducto)
                     .retrieve()
-                    .bodyToMono(DireccionDto.class)
+                    .bodyToMono(TipoProductoDto.class)
                     .block();
         } catch (Exception e){
             return null;
         }
     }
 
-    public TipoProductoDto obtenerTipoProducto(Long idTipoProducto){
+    public SucursalDto obtenerSucursal(Long idSucursal){
         try{
             return webClient.get()
-                    .uri("http://localhost:8084/api/v1/tipo-producto/{id}", idTipoProducto)
+                    .uri("http://localhost:8082/api/v1/sucursales/{id}", idSucursal)
                     .retrieve()
-                    .bodyToMono(TipoProductoDto.class)
+                    .bodyToMono(SucursalDto.class)
                     .block();
         } catch (Exception e){
             return null;

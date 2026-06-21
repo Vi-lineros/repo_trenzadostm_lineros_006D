@@ -1,5 +1,6 @@
 package com.trenzadostm.trenzadostmpedido.model;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;
@@ -26,11 +27,11 @@ public class Pedido {
     @Column(name = "id_usuario", nullable = false)
     private Long idUsuario;
 
-    @Column(name = "id_direccion", nullable = false)
-    private Long idDireccion;
-
     @Column(name = "id_sucursal", nullable = false)
     private Long idSucursal;
+
+    @Column(name = "opcion_entrega", nullable = false)
+    private String opcionEntrega;
 
     @Column(name = "fecha_pedido", nullable = false)
     private LocalDateTime fechaPedido;
@@ -39,12 +40,12 @@ public class Pedido {
     private String estadoPedido;
 
     @Column(name = "total", nullable = false)
-    private Double total;
+    private BigDecimal total;
 
     @Column(name = "iva", nullable = false)
-    private Double iva;
+    private BigDecimal iva;
 
     @Column(name = "total_con_iva", nullable = false)
-    private Double totalConIva;
+    private BigDecimal totalConIva;
 
 }

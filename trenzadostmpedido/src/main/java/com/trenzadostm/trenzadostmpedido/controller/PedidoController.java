@@ -1,6 +1,7 @@
 package com.trenzadostm.trenzadostmpedido.controller;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,7 +19,7 @@ import com.trenzadostm.trenzadostmpedido.model.Pedido;
 import com.trenzadostm.trenzadostmpedido.services.PedidoService;
 
 @RestController
-@RequestMapping("/api/v1/pedido")
+@RequestMapping("/api/v1/pedidos")
 public class PedidoController {
 
     @Autowired
@@ -34,21 +35,27 @@ public class PedidoController {
     }
 
     @PostMapping
-    public ResponseEntity<Pedido> guardarPedido(@RequestBody Pedido unPedido){
-        Pedido pedidoNuevo = pedidoService.guardarPedido(unPedido);
-        return ResponseEntity.status(HttpStatus.CREATED).body(pedidoNuevo);
-    }
-
-    @PutMapping("/{id}")
-    public ResponseEntity<Pedido> modificarPedido(@PathVariable Long id, @RequestBody Pedido unPedido){
+    public ResponseEntity<?> guardarPedido(@RequestBody Pedido unPedido){
         try {
-            Pedido pedidoActualizado = pedidoService.modificarPedido(id, unPedido);
-            return ResponseEntity.ok(pedidoActualizado);
-        } catch (Exception e) {
-            return ResponseEntity.notFound().build();
+            Pedido pedidoNuevo = pedidoService.guardarPedido(unPedido);
+            return ResponseEntity.status(HttpStatus.CREATED).body(pedidoNuevo);
+        } catch (RuntimeException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<?> modificarPedido(@PathVariable Long id, @RequestBody Pedido unPedido){
+        try {
+            Pedido pedidoActualizado = pedidoService.modificarPedido(id, unPedido);
+            return ResponseEntity.ok(pedidoActualizado);
+        } catch (NoSuchElementException e) {
+            return ResponseEntity.notFound().build();
+        } catch (RuntimeException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+   
     @GetMapping("/{id}")
     public ResponseEntity<Pedido> buscarPedido(@PathVariable Long id){
         try {
