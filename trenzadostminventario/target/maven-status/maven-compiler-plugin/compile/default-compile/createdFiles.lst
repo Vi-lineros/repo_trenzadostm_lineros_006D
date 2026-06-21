@@ -1,0 +1,17 @@
+com\trenzadostm\trenzadostminventario\services\CategoriaService.class
+com\trenzadostm\trenzadostminventario\services\TipoProductoService.class
+com\trenzadostm\trenzadostminventario\model\TipoProducto.class
+com\trenzadostm\trenzadostminventario\repository\CategoriaRepository.class
+com\trenzadostm\trenzadostminventario\TrenzadostminventarioApplication.class
+com\trenzadostm\trenzadostminventario\controller\TipoProductoController.class
+com\trenzadostm\trenzadostminventario\controller\CategoriaController.class
+com\trenzadostm\trenzadostminventario\services\InventarioService.class
+com\trenzadostm\trenzadostminventario\controller\ProductoController.class
+com\trenzadostm\trenzadostminventario\repository\InventarioRepository.class
+com\trenzadostm\trenzadostminventario\repository\ProductoRepository.class
+com\trenzadostm\trenzadostminventario\model\Categoria.class
+com\trenzadostm\trenzadostminventario\model\Inventario.class
+com\trenzadostm\trenzadostminventario\controller\InventarioController.class
+com\trenzadostm\trenzadostminventario\model\Producto.class
+com\trenzadostm\trenzadostminventario\services\ProductoService.class
+com\trenzadostm\trenzadostminventario\repository\TipoProductoRepository.class

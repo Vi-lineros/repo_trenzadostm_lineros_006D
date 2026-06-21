@@ -18,7 +18,7 @@ import com.trenzadostm.trenzadostminventario.model.TipoProducto;
 import com.trenzadostm.trenzadostminventario.services.TipoProductoService;
 
 @RestController
-@RequestMapping("/api/v1/tipo-producto")
+@RequestMapping("/api/v1/tipo-productos")
 public class TipoProductoController {
 
     @Autowired

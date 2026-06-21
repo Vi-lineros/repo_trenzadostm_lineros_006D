@@ -32,62 +32,41 @@ public class InventarioController {
         if (inventario.isEmpty()) {
             return ResponseEntity.noContent().build();
         }
-
         return ResponseEntity.ok(inventario);
     }
 
     @PostMapping
     public ResponseEntity<Inventario> guardarInventario(@RequestBody Inventario unInventario){
-
         Inventario inventarioNuevo = inventarioService.guardarInventario(unInventario);
-
         return ResponseEntity.status(HttpStatus.CREATED).body(inventarioNuevo);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Inventario> modificarInventario(@PathVariable Long id,
-            @RequestBody Inventario unInventario){
-
+    public ResponseEntity<Inventario> modificarInventario(@PathVariable Long id, @RequestBody Inventario unInventario){
         try{
-
-            Inventario inventarioActualizado =
-                    inventarioService.modificarInventario(id, unInventario);
-
+            Inventario inventarioActualizado = inventarioService.modificarInventario(id, unInventario);
             return ResponseEntity.ok(inventarioActualizado);
-
         } catch (Exception e){
-
             return ResponseEntity.notFound().build();
         }
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Inventario> buscarInventario(@PathVariable Long id){
-
         try{
-
-            Inventario inventario =
-                    inventarioService.buscarInventarioPorId(id);
-
+            Inventario inventario = inventarioService.buscarInventarioPorId(id);
             return ResponseEntity.ok(inventario);
-
         } catch (Exception e){
-
             return ResponseEntity.notFound().build();
         }
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminarInventario(@PathVariable Long id){
-
         try{
-
             inventarioService.eliminarInventario(id);
-
             return ResponseEntity.noContent().build();
-
         } catch (Exception e){
-
             return ResponseEntity.notFound().build();
         }
     }
