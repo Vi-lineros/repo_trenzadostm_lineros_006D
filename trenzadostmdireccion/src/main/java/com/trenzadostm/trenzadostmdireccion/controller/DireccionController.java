@@ -18,7 +18,7 @@ import com.trenzadostm.trenzadostmdireccion.model.Direccion;
 import com.trenzadostm.trenzadostmdireccion.services.DireccionService;
 
 @RestController
-@RequestMapping("api/v1/direccion")
+@RequestMapping("/api/v1/direcciones")
 public class DireccionController {
 
     @Autowired

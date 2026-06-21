@@ -18,7 +18,7 @@ import com.trenzadostm.trenzadostmdireccion.model.Ciudad;
 import com.trenzadostm.trenzadostmdireccion.services.CiudadService;
 
 @RestController
-@RequestMapping("/api/v1/ciudad")
+@RequestMapping("/api/v1/ciudades")
 public class CiudadController {
 
     @Autowired
