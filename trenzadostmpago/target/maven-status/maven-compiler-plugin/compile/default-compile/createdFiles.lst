@@ -1,0 +1,12 @@
+com\trenzadostm\trenzadostmpago\services\BancoService.class
+com\trenzadostm\trenzadostmpago\repository\BancoRepository.class
+com\trenzadostm\trenzadostmpago\dto\PedidoDto.class
+com\trenzadostm\trenzadostmpago\TrenzadostmpagoApplication.class
+com\trenzadostm\trenzadostmpago\client\ExternalServiceClient.class
+com\trenzadostm\trenzadostmpago\repository\PagoRepository.class
+com\trenzadostm\trenzadostmpago\config\WebConfig.class
+com\trenzadostm\trenzadostmpago\controller\PagoController.class
+com\trenzadostm\trenzadostmpago\model\Banco.class
+com\trenzadostm\trenzadostmpago\controller\BancoController.class
+com\trenzadostm\trenzadostmpago\model\Pago.class
+com\trenzadostm\trenzadostmpago\services\PagoService.class

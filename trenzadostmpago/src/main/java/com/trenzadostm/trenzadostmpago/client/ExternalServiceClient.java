@@ -17,7 +17,7 @@ public class ExternalServiceClient {
     public PedidoDto obtenerPedido(Long idPedido){
         try{
             return webClient.get()
-                    .uri("http://localhost:8085/api/v1/pedido/{id}", idPedido)
+                    .uri("http://localhost:8085/api/v1/pedidos/{id}", idPedido)
                     .retrieve()
                     .bodyToMono(PedidoDto.class)
                     .block();
