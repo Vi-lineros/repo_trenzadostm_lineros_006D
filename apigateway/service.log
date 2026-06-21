@@ -1,0 +1,43 @@
+﻿
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-06-21T15:45:53.465-04:00  INFO 36812 --- [apigateway] [           main] c.g.apigateway.ApigatewayApplication     : Starting ApigatewayApplication v0.0.1-SNAPSHOT using Java 21.0.10 with PID 36812 (E:\Full Stack 1\Experiencia 3\Evaluacion 3\Trenzados TM\apigateway\target\apigateway-0.0.1-SNAPSHOT.jar started by vicen in E:\Full Stack 1\Experiencia 3\Evaluacion 3\Trenzados TM\apigateway)
+2026-06-21T15:45:53.472-04:00  INFO 36812 --- [apigateway] [           main] c.g.apigateway.ApigatewayApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-21T15:46:00.327-04:00  INFO 36812 --- [apigateway] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2f8f07a6-cdbf-39f3-80a1-bd00fe52f562
+2026-06-21T15:46:02.228-04:00  INFO 36812 --- [apigateway] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2026-06-21T15:46:02.288-04:00  INFO 36812 --- [apigateway] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-21T15:46:02.288-04:00  INFO 36812 --- [apigateway] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-06-21T15:46:02.496-04:00  INFO 36812 --- [apigateway] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-21T15:46:02.502-04:00  INFO 36812 --- [apigateway] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8708 ms
+2026-06-21T15:46:03.724-04:00  WARN 36812 --- [apigateway] [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b0b7347e-ccbc-4621-9de8-995c5634a696
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-06-21T15:46:05.520-04:00  INFO 36812 --- [apigateway] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@52d3fafd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7f0b93b4, org.springframework.security.web.context.SecurityContextHolderFilter@68ef01a5, org.springframework.security.web.header.HeaderWriterFilter@3946075, org.springframework.web.filter.CorsFilter@1376883, org.springframework.security.web.authentication.logout.LogoutFilter@7e8279e5, com.gateway.apigateway.security.JwtAuthenticationFilter@4fd05028, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@186d8a71, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3dc40ab9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1f736d00, org.springframework.security.web.session.SessionManagementFilter@483f286e, org.springframework.security.web.access.ExceptionTranslationFilter@27f3f512, org.springframework.security.web.access.intercept.AuthorizationFilter@5ae15]
+2026-06-21T15:46:05.858-04:00  WARN 36812 --- [apigateway] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.cloud.gateway.config.GatewayClassPathWarningAutoConfiguration$SpringMvcFoundOnClasspathConfiguration': Failed to instantiate [org.springframework.cloud.gateway.config.GatewayClassPathWarningAutoConfiguration$SpringMvcFoundOnClasspathConfiguration]: Constructor threw exception
+2026-06-21T15:46:05.928-04:00  INFO 36812 --- [apigateway] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-06-21T15:46:06.222-04:00  INFO 36812 --- [apigateway] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-21T15:46:06.344-04:00 ERROR 36812 --- [apigateway] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Spring MVC found on classpath, which is incompatible with Spring Cloud Gateway.
+
+Action:
+
+Please set spring.main.web-application-type=reactive or remove spring-boot-starter-web dependency.
+
