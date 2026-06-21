@@ -17,7 +17,7 @@ import com.trenzadostm.trenzadostmusuario.model.Usuario;
 import com.trenzadostm.trenzadostmusuario.services.UsuarioService;
 
 @RestController
-@RequestMapping("api/v1/usuarios")
+@RequestMapping("/api/v1/usuarios")
 public class UsuarioController {
 
     @Autowired
@@ -42,7 +42,7 @@ public class UsuarioController {
             return ResponseEntity.notFound().build();
         }
     }
-
+ 
     @PostMapping
     public ResponseEntity<?> crearUsuario(@RequestBody Usuario unUsuario){
         try{
@@ -55,14 +55,9 @@ public class UsuarioController {
     @PutMapping("/{id}")
     public ResponseEntity<Usuario> modificarUsuario(@PathVariable Long id, @RequestBody Usuario unUsuario){
         try{
-            Usuario us = usuarioService.buscarPorId(id);
-            us.setIdUsuario(id);
-            us.setIdDireccion(unUsuario.getIdDireccion());
-            us.setNombre(unUsuario.getNombre());
-            us.setRut(unUsuario.getRut());
-            us.setCelular(unUsuario.getCelular());
-            us.setEmail(unUsuario.getEmail());
-            return ResponseEntity.ok(unUsuario);
+            Usuario usuarioActualizado = usuarioService.modificarUsuario(id, unUsuario);
+            return ResponseEntity.ok(usuarioActualizado);
+
         } catch (Exception e){
             return ResponseEntity.notFound().build();
         }
