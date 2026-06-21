@@ -1,0 +1,13 @@
+com\trenzadostm\trenzadostmreportes\repository\ReporteRepository.class
+com\trenzadostm\trenzadostmreportes\controller\ReporteController.class
+com\trenzadostm\trenzadostmreportes\model\Reporte.class
+com\trenzadostm\trenzadostmreportes\dto\InventarioDto.class
+com\trenzadostm\trenzadostmreportes\dto\ReporteInventarioDto.class
+com\trenzadostm\trenzadostmreportes\TrenzadostmreportesApplication.class
+com\trenzadostm\trenzadostmreportes\dto\ReporteVentasDto.class
+com\trenzadostm\trenzadostmreportes\config\WebConfig.class
+com\trenzadostm\trenzadostmreportes\services\ReporteService.class
+com\trenzadostm\trenzadostmreportes\client\ExternalServiceClient.class
+com\trenzadostm\trenzadostmreportes\dto\ReporteEnvioDto.class
+com\trenzadostm\trenzadostmreportes\dto\PedidoDto.class
+com\trenzadostm\trenzadostmreportes\dto\EnvioDto.class
