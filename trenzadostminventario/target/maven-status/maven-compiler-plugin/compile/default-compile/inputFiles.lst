@@ -1,0 +1,17 @@
+E:\Full Stack 1\Experiencia 3\Evaluacion 3\Trenzados TM\trenzadostminventario\src\main\java\com\trenzadostm\trenzadostminventario\controller\CategoriaController.java
+E:\Full Stack 1\Experiencia 3\Evaluacion 3\Trenzados TM\trenzadostminventario\src\main\java\com\trenzadostm\trenzadostminventario\controller\InventarioController.java
+E:\Full Stack 1\Experiencia 3\Evaluacion 3\Trenzados TM\trenzadostminventario\src\main\java\com\trenzadostm\trenzadostminventario\controller\ProductoController.java
+E:\Full Stack 1\Experiencia 3\Evaluacion 3\Trenzados TM\trenzadostminventario\src\main\java\com\trenzadostm\trenzadostminventario\controller\TipoProductoController.java
+E:\Full Stack 1\Experiencia 3\Evaluacion 3\Trenzados TM\trenzadostminventario\src\main\java\com\trenzadostm\trenzadostminventario\model\Categoria.java
+E:\Full Stack 1\Experiencia 3\Evaluacion 3\Trenzados TM\trenzadostminventario\src\main\java\com\trenzadostm\trenzadostminventario\model\Inventario.java
+E:\Full Stack 1\Experiencia 3\Evaluacion 3\Trenzados TM\trenzadostminventario\src\main\java\com\trenzadostm\trenzadostminventario\model\Producto.java
+E:\Full Stack 1\Experiencia 3\Evaluacion 3\Trenzados TM\trenzadostminventario\src\main\java\com\trenzadostm\trenzadostminventario\model\TipoProducto.java
+E:\Full Stack 1\Experiencia 3\Evaluacion 3\Trenzados TM\trenzadostminventario\src\main\java\com\trenzadostm\trenzadostminventario\repository\CategoriaRepository.java
+E:\Full Stack 1\Experiencia 3\Evaluacion 3\Trenzados TM\trenzadostminventario\src\main\java\com\trenzadostm\trenzadostminventario\repository\InventarioRepository.java
+E:\Full Stack 1\Experiencia 3\Evaluacion 3\Trenzados TM\trenzadostminventario\src\main\java\com\trenzadostm\trenzadostminventario\repository\ProductoRepository.java
+E:\Full Stack 1\Experiencia 3\Evaluacion 3\Trenzados TM\trenzadostminventario\src\main\java\com\trenzadostm\trenzadostminventario\repository\TipoProductoRepository.java
+E:\Full Stack 1\Experiencia 3\Evaluacion 3\Trenzados TM\trenzadostminventario\src\main\java\com\trenzadostm\trenzadostminventario\services\CategoriaService.java
+E:\Full Stack 1\Experiencia 3\Evaluacion 3\Trenzados TM\trenzadostminventario\src\main\java\com\trenzadostm\trenzadostminventario\services\InventarioService.java
+E:\Full Stack 1\Experiencia 3\Evaluacion 3\Trenzados TM\trenzadostminventario\src\main\java\com\trenzadostm\trenzadostminventario\services\ProductoService.java
+E:\Full Stack 1\Experiencia 3\Evaluacion 3\Trenzados TM\trenzadostminventario\src\main\java\com\trenzadostm\trenzadostminventario\services\TipoProductoService.java
+E:\Full Stack 1\Experiencia 3\Evaluacion 3\Trenzados TM\trenzadostminventario\src\main\java\com\trenzadostm\trenzadostminventario\TrenzadostminventarioApplication.java

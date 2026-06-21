@@ -1,0 +1,5 @@
+com\trenzadostm\trenzadostminventario\TrenzadostminventarioApplicationTests.class
+com\trenzadostm\trenzadostminventario\CategoriaServiceTest.class
+com\trenzadostm\trenzadostminventario\TipoProductoServiceTest.class
+com\trenzadostm\trenzadostminventario\ProductoServiceTest.class
+com\trenzadostm\trenzadostminventario\InventarioServiceTest.class

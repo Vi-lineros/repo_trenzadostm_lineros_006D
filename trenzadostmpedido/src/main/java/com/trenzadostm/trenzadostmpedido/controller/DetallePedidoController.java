@@ -18,7 +18,7 @@ import com.trenzadostm.trenzadostmpedido.model.DetallePedido;
 import com.trenzadostm.trenzadostmpedido.services.DetallePedidoService;
 
 @RestController
-@RequestMapping("/api/v1/detallepedido")
+@RequestMapping("/api/v1/detallepedidos")
 public class DetallePedidoController {
 
     @Autowired

@@ -44,9 +44,6 @@ public class Pago {
 
     @Column(name = "mensaje", nullable = true)
     private String mensaje;
-
-    @Column(name = "opcion_entrega", nullable = false)
-    private String opcionEntrega;
     
     @Column(name = "fecha_pago", nullable = false)
     private LocalDateTime fechaPago;

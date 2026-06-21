@@ -18,7 +18,7 @@ import com.trenzadostm.trenzadostmdireccion.model.Region;
 import com.trenzadostm.trenzadostmdireccion.services.RegionService;
 
 @RestController
-@RequestMapping("/api/v1/region")
+@RequestMapping("/api/v1/regiones")
 public class RegionController {
 
     @Autowired

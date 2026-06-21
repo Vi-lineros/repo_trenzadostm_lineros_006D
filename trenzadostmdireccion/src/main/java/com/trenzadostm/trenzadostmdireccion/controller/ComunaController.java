@@ -18,7 +18,7 @@ import com.trenzadostm.trenzadostmdireccion.model.Comuna;
 import com.trenzadostm.trenzadostmdireccion.services.ComunaService;
 
 @RestController
-@RequestMapping("/api/v1/comuna")
+@RequestMapping("/api/v1/comunas")
 public class ComunaController {
 
     @Autowired

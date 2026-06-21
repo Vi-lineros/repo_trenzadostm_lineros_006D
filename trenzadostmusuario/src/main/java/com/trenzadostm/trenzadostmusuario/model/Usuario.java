@@ -24,10 +24,13 @@ public class Usuario {
     @Column(nullable = false)
     private Long idDireccion;
 
+    @Column(nullable = true)
+    private Long idSucursal;
+
     @Column(nullable = false)
     private String nombre;
 
-    @Column(nullable = false, length = 13, unique = true)
+    @Column(nullable = false, length = 15, unique = true)
     private String rut;
 
     @Column(length = 20, nullable = true)
@@ -35,4 +38,13 @@ public class Usuario {
 
     @Column(nullable = false, unique = true)
     private String email;
+
+    @Column(nullable = false)
+    private String rol;
+
+    @Column(nullable = true)
+    private String cargo;
+
+    @Column(nullable = false)
+    private String estadoUsuario;
 }

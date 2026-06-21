@@ -40,6 +40,9 @@ public class PagoService {
         if (pedidoDto == null) {
             throw new RuntimeException("No se pudo obtener el pedido con ID: " + unPago.getIdPedido());
         }
+        if(unPago.getBanco() == null){
+            throw new RuntimeException("Debe seleccionar un banco");
+        }
 
         unPago.setMonto(pedidoDto.getTotalConIva());
 

@@ -1,0 +1,13 @@
+com\trenzadostm\trenzadostmusuario\model\Repartidor.class
+com\trenzadostm\trenzadostmusuario\dto\DireccionDto.class
+com\trenzadostm\trenzadostmusuario\services\RepartidorService.class
+com\trenzadostm\trenzadostmusuario\controller\RepartidorController.class
+com\trenzadostm\trenzadostmusuario\controller\UsuarioController.class
+com\trenzadostm\trenzadostmusuario\services\UsuarioService.class
+com\trenzadostm\trenzadostmusuario\repository\UsuarioRepository.class
+com\trenzadostm\trenzadostmusuario\model\Usuario.class
+com\trenzadostm\trenzadostmusuario\TrenzadostmusuarioApplication.class
+com\trenzadostm\trenzadostmusuario\client\ExternalServiceClient.class
+com\trenzadostm\trenzadostmusuario\config\WebConfig.class
+com\trenzadostm\trenzadostmusuario\dto\SucursalDto.class
+com\trenzadostm\trenzadostmusuario\repository\RepartidorRepository.class

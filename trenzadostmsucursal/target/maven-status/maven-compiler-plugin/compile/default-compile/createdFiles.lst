@@ -1,0 +1,5 @@
+com\trenzadotsm\trenzadostmsucursal\controller\SucursalController.class
+com\trenzadotsm\trenzadostmsucursal\services\SucursalService.class
+com\trenzadotsm\trenzadostmsucursal\repository\SucursalRepository.class
+com\trenzadotsm\trenzadostmsucursal\TrenzadostmsucursalApplication.class
+com\trenzadotsm\trenzadostmsucursal\model\Sucursal.class

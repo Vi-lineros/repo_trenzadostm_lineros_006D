@@ -1,0 +1,14 @@
+com\trenzadostm\trenzadostmpedido\dto\UsuarioDto.class
+com\trenzadostm\trenzadostmpedido\controller\PedidoController.class
+com\trenzadostm\trenzadostmpedido\model\Pedido.class
+com\trenzadostm\trenzadostmpedido\repository\PedidoRepository.class
+com\trenzadostm\trenzadostmpedido\dto\SucursalDto.class
+com\trenzadostm\trenzadostmpedido\TrenzadostmpedidoApplication.class
+com\trenzadostm\trenzadostmpedido\client\ExternalServiceClient.class
+com\trenzadostm\trenzadostmpedido\model\DetallePedido.class
+com\trenzadostm\trenzadostmpedido\dto\TipoProductoDto.class
+com\trenzadostm\trenzadostmpedido\services\PedidoService.class
+com\trenzadostm\trenzadostmpedido\config\WebConfig.class
+com\trenzadostm\trenzadostmpedido\services\DetallePedidoService.class
+com\trenzadostm\trenzadostmpedido\repository\DetallePedidoRepository.class
+com\trenzadostm\trenzadostmpedido\controller\DetallePedidoController.class

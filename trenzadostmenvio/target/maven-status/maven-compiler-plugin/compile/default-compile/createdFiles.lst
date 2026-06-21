@@ -1,0 +1,9 @@
+com\trenzadostm\trenzadostmenvio\client\ExternalServiceClient.class
+com\trenzadostm\trenzadostmenvio\dto\RepartidorDto.class
+com\trenzadostm\trenzadostmenvio\services\EnvioService.class
+com\trenzadostm\trenzadostmenvio\TrenzadostmenvioApplication.class
+com\trenzadostm\trenzadostmenvio\config\WebConfig.class
+com\trenzadostm\trenzadostmenvio\controller\EnvioController.class
+com\trenzadostm\trenzadostmenvio\model\Envio.class
+com\trenzadostm\trenzadostmenvio\dto\PedidoDto.class
+com\trenzadostm\trenzadostmenvio\repository\EnvioRepository.class
