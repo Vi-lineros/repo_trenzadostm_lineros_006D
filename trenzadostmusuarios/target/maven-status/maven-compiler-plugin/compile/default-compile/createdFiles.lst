@@ -1,0 +1,4 @@
+com\trenzadostm\trenzadostmusuarios\TrenzadostmusuariosApplication.class
+com\trenzadostm\trenzadostmusuarios\controller\AuthController.class
+com\trenzadostm\trenzadostmusuarios\security\TokenGenerator.class
+com\trenzadostm\trenzadostmusuarios\dto\LoginRequest.class
